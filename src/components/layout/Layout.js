@@ -16,7 +16,7 @@ function Layout() {
         <Router>
             <Navbar bg="dark" variant="dark" expand="lg">
                 <NavLink to="/" exact>
-                    <Navbar.Brand>Rick and Morty</Navbar.Brand>
+                    <Navbar.Brand>Games</Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

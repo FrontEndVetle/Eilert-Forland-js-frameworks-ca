@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './sass/partials/style.scss';
 import Layout from './components/layout/Layout';
 
 function App() {
