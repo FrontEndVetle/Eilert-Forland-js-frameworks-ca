@@ -10,6 +10,8 @@ import {
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
 import Contact from "../contact/Contact";
+import GameDetail from "../home/games/GameDetail";
+
 
 function Layout() {
     return (
@@ -34,6 +36,7 @@ function Layout() {
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/contact" component={Contact} />
+                    <Route path="/game/:id" component={GameDetail} />
                 </Switch>
             </Container>
         </Router>
