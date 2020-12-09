@@ -38,11 +38,14 @@ function ContactForm() {
 
     function onSubmit(data) {
         console.log("data", data);
-        alert("Thanks for your message");
+       let validated= document.querySelector(".validated");
+validated.style.display = "block";
     }
 
     return (
+
         <Form onSubmit={handleSubmit(onSubmit)}>
+              <h3 className="validated">The form has been sent. Thank you</h3>
             <Form.Group>
                 <Form.Label>First name</Form.Label>
                 <Form.Control name="firstName" placeholder="Enter your first name" ref={register} />
@@ -62,7 +65,7 @@ function ContactForm() {
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Send us message</Form.Label>
+                <Form.Label>Send us a message</Form.Label>
                 <Form.Control name="textArea" as="textarea" placeholder="Enter your message" rows={3} ref={register}/>
                 {errors.textArea && <p>{errors.textArea.message}</p>}
 

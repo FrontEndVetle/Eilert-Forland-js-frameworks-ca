@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+import GenrePlatform from "./GenrePlatform";
 
 function GameDetail(){
     const [detail, setDetail] = useState(null);
@@ -23,22 +24,52 @@ console.log(detail);
             .finally(() => setLoading(false));
     }, []);
 
-    if (loading) {
-        return <Spinner animation="border" className="spinner" />;
-    }
 
+
+
+    if (loading) {
+        return <Spinner className="spinner" animation="border" className="spinner" />;
+    }
     return (
+
         <Row>
-            <Col md={3} className="detail-image">
-                <Image src={detail.background_image} roundedCircle />
-            </Col>
-            <Col>
+            <Col className="detail-image">
                 <h1>{detail.name}</h1>
-                <p></p>{detail.description}
-                <a href={detail.website}><Button>LINK TO WEBSITE</Button></a>
+                                  <div className="row justify-content-center" >
+
+                                <Image className="detail-image" src={detail.background_image} roundedCircle />
+                                </div>
+           <div dangerouslySetInnerHTML={{ __html: detail.description }} />;
+
+              <Col>
+    {detail.genres.map(info => {
+            const { name } = info;
+            return(<GenrePlatform key={name} name={name}/>  )
+
+})}
+              </Col>
+                         <Col>
+    {detail.platforms.map(info => {
+            const { platform } = info;
+            return(<GenrePlatform key={platform} platform={platform}/>  )
+
+})}
+              </Col>
+
+              <Row>
+                  <Col>
+                  <div className=" row justify-content-center" >
+                <a href={detail.website}><Button >LINK TO WEBSITE</Button></a>
+
+                  </div>
+
+                  </Col>
+              </Row>
             </Col>
         </Row>
+
     );
+
 }
 
 

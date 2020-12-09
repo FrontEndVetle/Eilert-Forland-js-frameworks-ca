@@ -8,18 +8,24 @@ function GameItem({ id, name, image, rating, released }) {
     return (
         <Card>
             <Card.Img variant="top" src={image} />
-            <Card.Body>
+            <Card.Body className="d-flex flex-column">
                 <Card.Title>{name}</Card.Title>
 
       <Card.Text>
                Rating: {rating}<br></br>
                  Release date: {released}
     				</Card.Text>
-                <Link to={"game/" + id}>
-                    <Button variant="secondary" block>
-                        View
-                    </Button>
-                </Link>
+                    <div className="mt-auto">
+                        <Button type="button" variant="secondary" block>
+                        Add to favorite
+                        </Button>
+                        <Link to={"game/" + id}>
+                            <Button  variant="secondary" block>
+                                View
+                            </Button>
+                        </Link>
+
+                </div>
             </Card.Body>
         </Card>
     );
