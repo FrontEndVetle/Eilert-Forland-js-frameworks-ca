@@ -1,0 +1,23 @@
+form {
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+form p {
+    color: red;
+}
+
+.validated {
+    color: darkgreen;
+    font-size: 20px;
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    form {
+        margin: 20px 200px;
+    }
+}

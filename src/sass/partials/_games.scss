@@ -1,0 +1,48 @@
+.detail-image {
+    width: 70%;
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px 0px;
+}
+
+p {
+    text-align: center
+}
+
+.card {
+    text-align: center;
+    margin-bottom: 35px;
+    border: none;
+    box-shadow: 0px 2px 5px 2px;
+    transition: transform 0.7s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    background-color: rgb(0, 0, 78);
+}
+
+.search {
+    margin: 40px 0px;
+    box-shadow: 0px 1px 2px 1px;
+}
+
+.spinner {
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+@media only screen and (min-width: 600px) {
+    .card {
+        height: 340px;
+    }
+    .card-img-top {
+        height: 130px;
+    }
+}
