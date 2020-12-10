@@ -40,9 +40,10 @@ console.log(detail);
                                 <Image className="detail-image" src={detail.background_image} roundedCircle />
                                 </div>
            <div dangerouslySetInnerHTML={{ __html: detail.description }} />;
-<Col>
+<Col className="d-flex justify-content-between mb-5 mt-2">
 <GenrePlatform key={id} platforms={detail.platforms} genres={detail.genres} />
 </Col>
+
 
               <Row>
                   <Col>
