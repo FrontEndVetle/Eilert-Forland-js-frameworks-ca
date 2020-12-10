@@ -40,21 +40,9 @@ console.log(detail);
                                 <Image className="detail-image" src={detail.background_image} roundedCircle />
                                 </div>
            <div dangerouslySetInnerHTML={{ __html: detail.description }} />;
-
-              <Col>
-    {detail.genres.map(info => {
-            const { name } = info;
-            return(<GenrePlatform key={name} name={name}/>  )
-
-})}
-              </Col>
-                         <Col>
-    {detail.platforms.map(info => {
-            const { platform } = info;
-            return(<GenrePlatform key={platform} platform={platform}/>  )
-
-})}
-              </Col>
+<Col>
+<GenrePlatform key={id} platforms={detail.platforms} genres={detail.genres} />
+</Col>
 
               <Row>
                   <Col>

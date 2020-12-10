@@ -1,12 +1,23 @@
 import React from "react";
 
-function GenrePlatform({name, platform} ) {
-    console.log(name);
+function GenrePlatform({platforms, genres} ) {
+    console.log(platforms);
+    console.log(genres);
+          const genreList = genres.map((genre, index) => {
+            return <li key={index} >{genre.name}</li>
+
+            })
+            const platformList = platforms.map((type, i) => {
+            return <li key={i} >{type.platform.name}</li>
+
+            })
+
     return (
         <>
-<p>{name} </p>
-<p>{platform} </p>
-
+        <h3>Genres</h3>
+<ul>{genreList} </ul>
+<h3>Platforms</h3>
+<ul>{platformList} </ul>
 </>
 )
 
