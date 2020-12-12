@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Badge from 'react-bootstrap/Badge'
-import Col from "react-bootstrap/esm/Col";
 
 
 function GenrePlatform({platforms, genres} ) {
@@ -20,11 +19,11 @@ function GenrePlatform({platforms, genres} ) {
      <>
 
         <div>
-            <h3>Genres</h3>
+            <h2>Genres</h2>
             <>{genreList} </>
         </div>
          <div>
-            <h3>Platforms</h3>
+            <h2>Platforms</h2>
             <>{platformList} </>
         </div>
     </>
