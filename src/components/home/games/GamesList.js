@@ -43,8 +43,7 @@ useEffect (() => {
     <Row>
         {filteredGames.map(game => {
             const { id, name, background_image, rating,released } = game;
-    console.log(games);
-
+          console.log(game);
             return (
                 <Col sm={6} md={3} key={id}>
                     <GameItem id={id} name={name} image={background_image} rating={rating} released={released} />

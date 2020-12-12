@@ -6,21 +6,25 @@ import Button from "react-bootstrap/Button";
 
 
 function GameItem({ id, name, image, rating, released }) {
+let favoriteList = [];
 
 
 //add game to favorite
 const addToFavorite = () => {
-    const favorite = {name: name, image: image, id: id}
+    const favorite = {name: name, image: image, id: id, released: released, rating: rating}
     console.log(favorite);
 
-    let savedFavorite = JSON.parse(localStorage.getItem(id));
-    localStorage.setItem(id, JSON.stringify(favorite));
+ favoriteList.push(favorite);
 
-    if(savedFavorite === null) {
-        localStorage.setItem(savedFavorite, JSON.stringify(favorite))
+
+    //let savedFavorite = JSON.parse(localStorage.getItem(id));
+    localStorage.setItem("favoriteList", JSON.stringify(favoriteList));
+
+   /* if(savedFavorite === null) {
+        localStorage.setItem(savedFavorite.id, JSON.stringify(favorite))
     } else if (localStorage.getItem(savedFavorite.id === favorite.id)) {
         localStorage.removeItem(savedFavorite);
-    }
+    }*/
 }
     return (
         <Card>
