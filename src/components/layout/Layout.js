@@ -11,6 +11,8 @@ import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
 import Contact from "../contact/Contact";
 import GameDetail from "../home/games/GameDetail";
+import Favorite from "../favorite/Favorite";
+
 
 
 function Layout() {
@@ -29,6 +31,9 @@ function Layout() {
                         <NavLink to="/contact" className="nav-link">
                             Contact
                         </NavLink>
+                         <NavLink to="/favorite" className="nav-link">
+                            Favorites
+                        </NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -37,6 +42,7 @@ function Layout() {
                     <Route path="/" exact component={Home} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/game/:id" component={GameDetail} />
+                     <Route path="/favorite" component={Favorite} />
                 </Switch>
             </Container>
         </Router>

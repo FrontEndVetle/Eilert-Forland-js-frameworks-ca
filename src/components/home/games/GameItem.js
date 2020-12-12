@@ -14,6 +14,7 @@ const addToFavorite = () => {
     console.log(favorite);
 
     let savedFavorite = JSON.parse(localStorage.getItem(id));
+    localStorage.setItem(id, JSON.stringify(favorite));
 
     if(savedFavorite === null) {
         localStorage.setItem(savedFavorite, JSON.stringify(favorite))
