@@ -8,7 +8,6 @@ return(
 <>
 {favorite.map(game => {
         const {name, id, image, rating, released} = game;
-    console.log(image)
 return (
 
           <div key={id} >

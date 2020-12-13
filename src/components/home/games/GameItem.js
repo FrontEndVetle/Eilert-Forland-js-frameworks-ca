@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 
 
 function GameItem({ id, name, image, rating, released }) {
-let favoriteList = [];
+const favoriteList = [];
 
 
 //add game to favorite
