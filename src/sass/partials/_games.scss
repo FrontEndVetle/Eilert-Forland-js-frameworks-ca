@@ -38,6 +38,11 @@ p {
     margin-left: 50%;
 }
 
+.favorite-card {
+    max-width: 200px;
+    height: 200px;
+}
+
 @media only screen and (min-width: 600px) {
     .card {
         height: 340px;

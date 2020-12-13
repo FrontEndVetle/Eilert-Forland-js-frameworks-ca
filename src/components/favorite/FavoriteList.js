@@ -12,9 +12,9 @@ return(
 return (
 
           <div key={id} >
-         <Card>
-            <Card.Img variant="top" src={image} />
-     https://github.com/FrontEndVetle/Eilert-Forland-js-frameworks-ca       <Card.Body className="d-flex flex-column">
+         <Card className="favorite-card">
+            <Card.Img  src={image} />
+    <Card.Body className="d-flex flex-column">
                 <Card.Title>{name}</Card.Title>
       <Card.Text>
                Rating: {rating}<br></br>
