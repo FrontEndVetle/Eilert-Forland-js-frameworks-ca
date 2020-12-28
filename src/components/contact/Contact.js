@@ -5,10 +5,10 @@ import Heading from './../layout/Heading'
 
 export function Contact(){
     return(
-          <div>
-              <Heading title="Contact"></Heading>
-        <ContactForm />
-    </div>
+        <div>
+                <Heading title="Contact"></Heading>
+                <ContactForm />
+        </div>
     )
 }
 

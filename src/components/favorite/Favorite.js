@@ -8,7 +8,6 @@ function Favorite() {
         return (
             <div>
                 <Heading title="My Favorite Games"></Heading>
-
                 <FavoriteList />
             </div>
         )

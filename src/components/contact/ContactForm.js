@@ -32,14 +32,14 @@ const schema = yup.object().shape({
 });
 
 function ContactForm() {
-  const { register, handleSubmit, errors } = useForm({
+    const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
     function onSubmit(data) {
         console.log("data", data);
        let validated= document.querySelector(".validated");
-validated.style.display = "block";
+        validated.style.display = "block";
     }
 
     return (

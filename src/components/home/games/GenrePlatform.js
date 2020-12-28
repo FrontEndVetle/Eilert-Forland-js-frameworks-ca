@@ -4,8 +4,7 @@ import Badge from 'react-bootstrap/Badge'
 
 
 function GenrePlatform({platforms, genres} ) {
-    console.log(platforms);
-    console.log(genres);
+
           const genreList = genres.map((genre, index) => {
             return <Badge pill variant="success" key={index} >{genre.name}</Badge>
 

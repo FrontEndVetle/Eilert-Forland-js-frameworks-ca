@@ -5,8 +5,8 @@ import GameList from './games/GamesList'
 function Home() {
     return (
         <>
-              <Heading title="Games"></Heading>
-                <GameList/>
+            <Heading title="Games"></Heading>
+            <GameList/>
         </>
     );
 }

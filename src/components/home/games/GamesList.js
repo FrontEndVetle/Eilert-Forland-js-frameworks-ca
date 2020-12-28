@@ -26,31 +26,30 @@ useEffect (() => {
    const filterGames = function(e) {
         const searchValue = e.target.value.toLowerCase();
         const filteredArray = games.filter(function(char) {
-            const lowerCaseName = char.name.toLowerCase();
+        const lowerCaseName = char.name.toLowerCase();
 
-            if (lowerCaseName.startsWith(searchValue)) {
-                return true;
-            }
-            return false;
+        if (lowerCaseName.startsWith(searchValue)) {
+            return true;
+        }
+        return false;
         });
 
          setFilteredGames(filteredArray);
    }
 
-  return (
-<>
-<Search handleSearch={filterGames} />
-    <Row>
-        {filteredGames.map(game => {
-            const { id, name, background_image, rating,released } = game;
-          console.log(game);
-            return (
-                <Col sm={6} md={3} key={id}>
-                    <GameItem id={id} name={name} image={background_image} rating={rating} released={released} />
-                </Col>
-            );
-        })}
-    </Row>
+    return (
+    <>
+        <Search handleSearch={filterGames} />
+        <Row>
+            {filteredGames.map(game => {
+                const { id, name, background_image, rating,released } = game;
+                return (
+                    <Col sm={6} md={3} key={id}>
+                        <GameItem id={id} name={name} image={background_image} rating={rating} released={released} />
+                    </Col>
+                );
+            })}
+        </Row>
     </>
 );
 

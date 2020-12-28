@@ -15,8 +15,7 @@ function GameDetail(){
     let { id } = useParams();
 
     const url = BASE_URL + "/" + id;
-console.log(detail);
- useEffect(() => {
+    useEffect(() => {
         fetch(url)
             .then(response => response.json())
             .then(json => setDetail(json))
@@ -35,25 +34,20 @@ console.log(detail);
         <Row>
             <Col className="detail-image">
                 <h1>{detail.name}</h1>
-                                  <div className="row justify-content-center" >
-
-                                <Image className="detail-image" src={detail.background_image} roundedCircle />
-                                </div>
-           <div dangerouslySetInnerHTML={{ __html: detail.description }} />;
-<Col className="d-flex justify-content-between mb-5 mt-2">
-<GenrePlatform key={id} platforms={detail.platforms} genres={detail.genres} />
-</Col>
-
-
-              <Row>
-                  <Col>
-                  <div className=" row justify-content-center" >
-                <a href={detail.website}><Button >LINK TO WEBSITE</Button></a>
-
-                  </div>
-
-                  </Col>
-              </Row>
+                <div className="row justify-content-center" >
+                <Image className="detail-image" src={detail.background_image} roundedCircle />
+                </div>
+                <div dangerouslySetInnerHTML={{ __html: detail.description }} />;
+                <Col className="d-flex justify-content-between mb-5 mt-2">
+                    <GenrePlatform key={id} platforms={detail.platforms} genres={detail.genres} />
+                </Col>
+                <Row>
+                    <Col>
+                        <div className=" row justify-content-center" >
+                        <a href={detail.website}><Button >LINK TO WEBSITE</Button></a>
+                        </div>
+                    </Col>
+                </Row>
             </Col>
         </Row>
 
