@@ -28,7 +28,7 @@ useEffect (() => {
         const filteredArray = games.filter(function(char) {
         const lowerCaseName = char.name.toLowerCase();
 
-        if (lowerCaseName.startsWith(searchValue)) {
+        if (lowerCaseName.includes(searchValue)) {
             return true;
         }
         return false;
