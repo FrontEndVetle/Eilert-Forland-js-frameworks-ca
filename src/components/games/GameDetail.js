@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useParams } from "react-router-dom";
-import { BASE_URL } from "../../constants/Api";
+import { BASE_URL } from "../constants/Api";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";

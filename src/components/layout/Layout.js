@@ -10,7 +10,7 @@ import {
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
 import Contact from "../contact/Contact";
-import GameDetail from "../home/games/GameDetail";
+import GameDetail from "../games/GameDetail";
 import Favorite from "../favorite/Favorite";
 
 
