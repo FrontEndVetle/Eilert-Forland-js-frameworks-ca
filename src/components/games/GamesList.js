@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {BASE_URL} from "../constants/Apis";
+import {BASE_URL} from "../constants/Api";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import GameItem from "./GameItem";
