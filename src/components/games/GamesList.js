@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import GameItem from './GameItem';
 import Search from './Search';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import Button from 'react-bootstrap/Button';
 
 function GameList() {
 	const [games, setGames] = useState([]);
@@ -34,6 +36,18 @@ function GameList() {
 		setFilteredGames(filteredArray);
 	};
 
+	const favoriteList = [];
+
+	//add game to favorite
+	const addToFavorite = (game) => {
+		console.log(game);
+
+		favoriteList.push(game);
+
+		//let savedFavorite = JSON.parse(localStorage.getItem(id));
+		localStorage.setItem('favoriteList', JSON.stringify(favoriteList));
+	};
+
 	return (
 		<>
 			<Search handleSearch={filterGames} />
@@ -41,13 +55,18 @@ function GameList() {
 				{filteredGames.map((game) => {
 					const { id, name, background_image, rating, released } = game;
 					return (
-						<Col sm={6} lg={3} key={id}>
+						<Col sm={6} lg={3} key={id} className='d-flex '>
 							<GameItem
 								id={id}
 								name={name}
 								image={background_image}
 								rating={rating}
 								released={released}
+								addFav={
+									<Button onClick={() => addToFavorite(game)}>
+										<AiFillHeart className='card__icon' />
+									</Button>
+								}
 							/>
 						</Col>
 					);

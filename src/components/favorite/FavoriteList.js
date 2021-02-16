@@ -3,11 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 function FavoriteList() {
 	let favorite = JSON.parse(localStorage.getItem('favoriteList'));
-	if (favorite === null) {
-		favorite = 'f';
-	} else {
-		return 'hello';
-	}
+
 	return (
 		<>
 			{favorite.map((game) => {

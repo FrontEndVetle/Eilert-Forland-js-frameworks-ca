@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap/';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import GenrePlatform from './GenrePlatform';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
 function GameDetail() {
 	const [detail, setDetail] = useState(null);
@@ -25,6 +26,7 @@ function GameDetail() {
 	if (loading) {
 		return <Spinner className='spinner' animation='border' />;
 	}
+
 	return (
 		<Container fluid className='bg-dark'>
 			<Container>

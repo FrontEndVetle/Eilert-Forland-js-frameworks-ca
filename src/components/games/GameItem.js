@@ -3,29 +3,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Row, Col } from 'react-bootstrap';
 
-function GameItem({ id, name, image, rating, released }) {
-	const favoriteList = [];
-
-	//add game to favorite
-	const addToFavorite = () => {
-		const favorite = {
-			name: name,
-			image: image,
-			id: id,
-			released: released,
-			rating: rating,
-		};
-		console.log(favorite);
-
-		favoriteList.push(favorite);
-
-		//let savedFavorite = JSON.parse(localStorage.getItem(id));
-		localStorage.setItem('favoriteList', JSON.stringify(favoriteList));
-	};
+function GameItem({ id, name, image, rating, released, addFav }) {
 	return (
-		<Card>
-			<Card.Img variant='top' src={image} />
+		<Card bg='secondary'>
+			<Card.Img className='card__img' variant='top' src={image} />
 			<Card.Body className='d-flex flex-column'>
 				<Card.Title>{name}</Card.Title>
 				<Card.Text>
@@ -33,20 +16,16 @@ function GameItem({ id, name, image, rating, released }) {
 					<br></br>
 					<b>Release date:</b> {released}
 				</Card.Text>
-				<div className='mt-auto'>
-					<Button
-						type='button'
-						onClick={addToFavorite}
-						variant='secondary'
-						block>
-						Add to favorite
-					</Button>
-					<Link to={'game/' + id}>
-						<Button variant='secondary' block>
-							View
-						</Button>
-					</Link>
-				</div>
+				<Row>
+					<Col>
+						<Link to={'game/' + id}>
+							<Button className='card__btn' variant='secondary' block>
+								View
+							</Button>
+						</Link>
+					</Col>
+					<Col>{addFav}</Col>
+				</Row>
 			</Card.Body>
 		</Card>
 	);
