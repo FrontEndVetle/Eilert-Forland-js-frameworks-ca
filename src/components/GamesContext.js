@@ -1,5 +1,4 @@
 import React, { useState, useEffect, createContext } from 'react';
-import { create } from 'yup/lib/array';
 import { BASE_URL } from './constants/Api';
 
 const GamesContext = createContext();
