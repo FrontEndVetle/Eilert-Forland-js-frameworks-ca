@@ -19,7 +19,7 @@ function GameItem({ id, name, image, rating, released, addFav }) {
 				<Row>
 					<Col>
 						<Link to={'game/' + id}>
-							<Button className='card__btn' variant='secondary' block>
+							<Button className='card__btn' variant='dark' block>
 								View
 							</Button>
 						</Link>
