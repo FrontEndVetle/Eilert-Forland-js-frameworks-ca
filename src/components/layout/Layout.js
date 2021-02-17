@@ -7,12 +7,12 @@ import {
 	Route,
 	NavLink,
 } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
 import Home from '../home/Home';
 import Contact from '../contact/Contact';
 import GameDetail from '../games/GameDetail';
 import Favorite from '../favorite/Favorite';
 import { GamesProvider } from '../GamesContext';
+import Footer from './Footer';
 
 function Layout() {
 	return (
@@ -37,15 +37,14 @@ function Layout() {
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
-				<Container>
-					<Switch>
-						<Route path='/' exact component={Home} />
-						<Route path='/contact' component={Contact} />
-						<Route path='/game/:id' component={GameDetail} />
-						<Route path='/favorite' component={Favorite} />
-					</Switch>
-				</Container>
+				<Switch>
+					<Route path='/' exact component={Home} />
+					<Route path='/contact' component={Contact} />
+					<Route path='/game/:id' component={GameDetail} />
+					<Route path='/favorite' component={Favorite} />
+				</Switch>
 			</Router>
+			<Footer />
 		</GamesProvider>
 	);
 }

@@ -1,0 +1,14 @@
+.footer {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    &__c {
+        background-color: black;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 641px) {}
+
+@media (min-width: 961px) {}

@@ -9,21 +9,12 @@ import Button from 'react-bootstrap/Button';
 import { GamesContext } from '../GamesContext';
 
 function GameList() {
-	const [games, setGames] = useContext(GamesContext);
+	const [games] = useContext(GamesContext);
 	const [filteredGames, setFilteredGames] = useState([]);
-	//	const [games, setGames] = useState([]);
-	//	const [filteredGames, setFilteredGames] = useState([]);
 
-	/*useEffect(() => {
-		fetch(BASE_URL)
-			.then((response) => response.json())
-			//  .then(json => console.dir(json))
-			.then((json) => {
-				setGames(json.results);
-				setFilteredGames(json.results);
-			})
-			.catch((error) => console.log(error));
-	}, []);*/
+	useEffect(() => {
+		setFilteredGames(games);
+	}, [games]);
 
 	const filterGames = function (e) {
 		const searchValue = e.target.value.toLowerCase();
