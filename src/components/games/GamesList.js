@@ -39,7 +39,7 @@ function GameList() {
 	const favoriteList = [];
 
 	//add game to favorite
-	const addToFavorite = (game) => {
+	const toggleFav = (game) => {
 		console.log(game);
 
 		favoriteList.push(game);
@@ -47,7 +47,7 @@ function GameList() {
 		//let savedFavorite = JSON.parse(localStorage.getItem(id));
 		localStorage.setItem('favoriteList', JSON.stringify(favoriteList));
 	};
-
+	console.log(games);
 	return (
 		<>
 			<Search handleSearch={filterGames} />
@@ -63,7 +63,7 @@ function GameList() {
 								rating={rating}
 								released={released}
 								addFav={
-									<Button onClick={() => addToFavorite(game)}>
+									<Button onClick={() => toggleFav(game)}>
 										<AiFillHeart className='card__icon' />
 									</Button>
 								}
