@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { BASE_URL } from '../constants/Api';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,21 +6,12 @@ import GameItem from './GameItem';
 import Search from './Search';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import Button from 'react-bootstrap/Button';
+import { GamesContext } from '../GamesContext';
 
 function GameList() {
-	const [games, setGames] = useState([]);
-	const [filteredGames, setFilteredGames] = useState([]);
+	const [games] = useContext(GamesContext);
 
-	useEffect(() => {
-		fetch(BASE_URL)
-			.then((response) => response.json())
-			//  .then(json => console.dir(json))
-			.then((json) => {
-				setGames(json.results);
-				setFilteredGames(json.results);
-			})
-			.catch((error) => console.log(error));
-	}, []);
+	const [filteredGames, setFilteredGames] = useState([]);
 
 	const filterGames = function (e) {
 		const searchValue = e.target.value.toLowerCase();
