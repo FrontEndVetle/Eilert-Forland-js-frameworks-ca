@@ -15,8 +15,8 @@ function Home() {
 						alt='First slide'
 					/>
 					<Carousel.Caption>
-						<h3>First slide label</h3>
-						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+						<h2>Search Games</h2>
+						<p>The games website lets you search for you favorite games.</p>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item interval={5000}>
@@ -26,8 +26,8 @@ function Home() {
 						alt='Second slide'
 					/>
 					<Carousel.Caption>
-						<h3>Second slide label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<h2>Add to favorite</h2>
+						<p>Add your favorite games to your "favorite" list</p>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item interval={5000}>
@@ -37,9 +37,9 @@ function Home() {
 						alt='Third slide'
 					/>
 					<Carousel.Caption>
-						<h3>Third slide label</h3>
+						<h2>Game information</h2>
 						<p>
-							Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+							View which platforms the games are on and what genres they are.
 						</p>
 					</Carousel.Caption>
 				</Carousel.Item>

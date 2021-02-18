@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import FormControl from 'react-bootstrap/FormControl';
+import Swal from 'sweetalert2';
 
 const schema = yup.object().shape({
 	firstName: yup
@@ -32,6 +32,7 @@ function ContactForm() {
 
 	function onSubmit(data) {
 		console.log('data', data);
+		Swal.fire('Message sent!', 'We will reply within 48 hours!', 'success');
 	}
 
 	return (
@@ -43,10 +44,8 @@ function ContactForm() {
 					name='firstName'
 					placeholder='Enter your first name'
 					ref={register}
-					isValid={!errors.name}
-					isInvalid={!!errors.name}
+					isInvalid={errors.name}
 				/>
-				<Form.Control.Feedback>Looks good!</Form.Control.Feedback>
 				<Form.Control.Feedback type='invalid'>
 					{errors.name}
 				</Form.Control.Feedback>
@@ -62,9 +61,7 @@ function ContactForm() {
 					ref={register}
 					isInvalid={!!errors.name}
 				/>
-				<Form.Control.Feedback type='invalid'>
-					{errors.lastName && <p>{errors.lastName.message}</p>}
-				</Form.Control.Feedback>
+				{errors.lastName && <p>{errors.lastName.message}</p>}
 			</Form.Group>
 
 			<Form.Group>

@@ -57,7 +57,10 @@ function GameList() {
 								rating={rating}
 								released={released}
 								addFav={
-									<Button variant='danger' onClick={() => toggleFav(game)}>
+									<Button
+										className='card__btn'
+										variant='danger'
+										onClick={() => toggleFav(game)}>
 										<AiFillHeart className='card__icon' />
 									</Button>
 								}

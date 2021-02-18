@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap');
+$heading-stack: 'Press Start 2P',
+cursive;
+$font-stack: 'Quicksand',
+sans-serif;
+//overwrite bootstrap theme colors
+$primary: #00103d;
+$secondary: #6fb2da;
+$success: #136e13;
+$info: rgb(13,
+115,
+146);
+$danger: #a6082a;
+$light: rgb(230,
+230,
+230);
+$dark: rgb(34,
+34,
+34);
+$link: rgb(221,
+221,
+221);
+//borders
+$dark-border: 1px solid $dark;
+//text
+$text-light: #ebebeb;
+$text-color: #2e2e2e;
+$link-hover: #fff;
+$hover-a: #fff;
+//bg color
+$copyright-bg: #070727;
+$bg-light: $light;
+$bg-dark: #dadada;

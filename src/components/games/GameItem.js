@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Row, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 function GameItem({ id, name, image, rating, released, addFav }) {
+	const history = useHistory();
+
 	return (
-		<Card bg='secondary'>
+		<Card bg='dark'>
 			<Card.Img className='card__img' variant='top' src={image} />
 			<Card.Body className='d-flex flex-column'>
 				<Card.Title>{name}</Card.Title>
@@ -16,13 +19,17 @@ function GameItem({ id, name, image, rating, released, addFav }) {
 					<br></br>
 					<b>Release date:</b> {released}
 				</Card.Text>
-				<Row>
+				<Row className='d-flex justify-content-center'>
 					<Col>
-						<Link to={'game/' + id}>
-							<Button className='card__btn' variant='dark' block>
-								View
-							</Button>
-						</Link>
+						<Button
+							className='card__btn'
+							variant='light'
+							block
+							onClick={() => {
+								history.push('game/' + id);
+							}}>
+							VIEW
+						</Button>
 					</Col>
 					<Col>{addFav}</Col>
 				</Row>
