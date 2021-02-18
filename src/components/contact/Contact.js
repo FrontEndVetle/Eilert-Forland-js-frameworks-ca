@@ -5,7 +5,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 
 export function Contact() {
 	return (
-		<Container>
+		<Container className='content'>
 			<Heading title='Contact'></Heading>
 			<Row className='d-flex justify-content-center'>
 				<Col md={6}>

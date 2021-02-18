@@ -9,10 +9,11 @@ import {
 } from 'react-router-dom';
 import Home from '../home/Home';
 import Contact from '../contact/Contact';
-import GameDetail from '../games/GameDetail';
+import GameDetail from '../games/gameDetail/GameDetail';
 import Favorite from '../favorite/Favorite';
 import { GamesProvider } from '../GamesContext';
 import Footer from './Footer';
+import { Container } from 'react-bootstrap';
 
 function Layout() {
 	return (
@@ -20,13 +21,13 @@ function Layout() {
 			<Router>
 				<Navbar bg='dark' variant='dark' expand='lg'>
 					<NavLink to='/' exact>
-						<Navbar.Brand>Games</Navbar.Brand>
+						<Navbar.Brand>GameSearch</Navbar.Brand>
 					</NavLink>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='mr-auto'>
 							<NavLink to='/' exact className='nav-link'>
-								Home
+								Games
 							</NavLink>
 							<NavLink to='/contact' className='nav-link'>
 								Contact

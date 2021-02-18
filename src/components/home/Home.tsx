@@ -44,7 +44,7 @@ function Home() {
 					</Carousel.Caption>
 				</Carousel.Item>
 			</Carousel>
-			<Container>
+			<Container className='content'>
 				<Heading title='Games'></Heading>
 				<GameList />
 			</Container>
