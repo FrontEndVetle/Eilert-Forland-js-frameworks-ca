@@ -29,38 +29,42 @@ function GameDetail() {
 
 	return (
 		<Container fluid className='bg-dark'>
-			<Container>
-				<Row>
-					<Col lg={12} className='detail-image'>
-						<h1> {detail.name} </h1>
+			<Container className='content'>
+				<h1> {detail.name} </h1>
+
+				<Row className='detail'>
+					<Col lg={6} className='detail__img'>
 						<div className='row justify-content-center'>
 							<Image
-								className='detail-image'
+								className='detail__img'
 								src={detail.background_image}
 								roundedCircle
 							/>
 						</div>
-						<Col lg={6}>
-							<div dangerouslySetInnerHTML={{ __html: detail.description }} />;
+						<Col>
+							<div className=' row justify-content-center'>
+								<a href={detail.website}>
+									<Button className='detail__btn'> LINK TO WEBSITE </Button>
+								</a>
+							</div>
 						</Col>
-						<Col className='d-flex justify-content-between mb-5 mt-2'>
-							<GenrePlatform
-								key={id}
-								platforms={detail.platforms}
-								genres={detail.genres}
-							/>
-						</Col>
-						<Row>
-							<Col>
-								<div className=' row justify-content-center'>
-									<a href={detail.website}>
-										<Button> LINK TO WEBSITE </Button>
-									</a>
-								</div>
-							</Col>
-						</Row>
+					</Col>
+					<Col lg={6}>
+						<div
+							className='detail__text'
+							dangerouslySetInnerHTML={{ __html: detail.description }}
+						/>
+						;
 					</Col>
 				</Row>
+
+				<Col className=' mb-5'>
+					<GenrePlatform
+						key={id}
+						platforms={detail.platforms}
+						genres={detail.genres}
+					/>
+				</Col>
 			</Container>
 		</Container>
 	);

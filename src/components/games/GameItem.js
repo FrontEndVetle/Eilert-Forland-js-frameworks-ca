@@ -18,6 +18,8 @@ function GameItem({ id, name, image, rating, released, addFav }) {
 					<br></br>
 					<b>Release date:</b> {released}
 				</Card.Text>
+			</Card.Body>
+			<Card.Footer>
 				<Row className='d-flex justify-content-center'>
 					<Col>
 						<Button
@@ -32,7 +34,7 @@ function GameItem({ id, name, image, rating, released, addFav }) {
 					</Col>
 					<Col>{addFav}</Col>
 				</Row>
-			</Card.Body>
+			</Card.Footer>
 		</Card>
 	);
 }
