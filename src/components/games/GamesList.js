@@ -3,7 +3,7 @@ import { BASE_URL } from '../constants/Api';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import GameItem from './GameItem';
-import Search from './Search';
+import Search from '../../ui/Search';
 import { AiFillHeart } from 'react-icons/ai';
 import Button from 'react-bootstrap/Button';
 import { FaveContext, GamesContext } from '../GamesContext';

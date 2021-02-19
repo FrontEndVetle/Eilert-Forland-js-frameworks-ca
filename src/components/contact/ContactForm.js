@@ -86,7 +86,9 @@ function ContactForm() {
 				{errors.textArea && <p>{errors.textArea.message}</p>}
 			</Form.Group>
 
-			<Button type='submit'>Submit</Button>
+			<Button variant='danger' type='submit'>
+				Send
+			</Button>
 		</Form>
 	);
 }

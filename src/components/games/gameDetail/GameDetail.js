@@ -44,7 +44,10 @@ function GameDetail() {
 						<Col>
 							<div className=' row justify-content-center'>
 								<a href={detail.website}>
-									<Button className='detail__btn'> LINK TO WEBSITE </Button>
+									<Button variant='danger' className='detail__btn'>
+										{' '}
+										LINK TO WEBSITE{' '}
+									</Button>
 								</a>
 							</div>
 						</Col>

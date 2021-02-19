@@ -7,11 +7,11 @@ form {
 }
 
 form p {
-    color: red;
+    color: $danger;
 }
 
 .validated {
-    color: darkgreen;
+    color: $success;
     font-size: 20px;
     display: none;
 }

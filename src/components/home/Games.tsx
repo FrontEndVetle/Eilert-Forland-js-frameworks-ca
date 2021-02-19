@@ -4,7 +4,7 @@ import GameList from '../games/GamesList';
 import Carousel from 'react-bootstrap/Carousel';
 import { Container } from 'react-bootstrap';
 
-function Home() {
+function Games() {
 	return (
 		<>
 			<Carousel>
@@ -26,7 +26,7 @@ function Home() {
 						alt='Second slide'
 					/>
 					<Carousel.Caption>
-						<h2>Add to favorite</h2>
+						<h2>Add favorites</h2>
 						<p>Add your favorite games to your "favorite" list</p>
 					</Carousel.Caption>
 				</Carousel.Item>
@@ -52,4 +52,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default Games;

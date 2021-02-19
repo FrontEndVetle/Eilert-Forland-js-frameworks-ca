@@ -32,8 +32,8 @@ function GenrePlatform({ platforms, genres }) {
 }
 
 GenrePlatform.propTypes = {
-	genres: PropTypes.string.isRequired,
-	platforms: PropTypes.string.isRequired,
+	genres: PropTypes.array.isRequired,
+	platforms: PropTypes.array.isRequired,
 };
 
 export default GenrePlatform;

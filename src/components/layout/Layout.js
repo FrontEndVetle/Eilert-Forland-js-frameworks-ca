@@ -7,13 +7,12 @@ import {
 	Route,
 	NavLink,
 } from 'react-router-dom';
-import Home from '../home/Home';
+import Games from '../home/Games';
 import Contact from '../contact/Contact';
 import GameDetail from '../games/gameDetail/GameDetail';
 import Favorite from '../favorite/Favorite';
 import { GamesProvider } from '../GamesContext';
 import Footer from './Footer';
-import { Container } from 'react-bootstrap';
 
 function Layout() {
 	return (
@@ -39,7 +38,7 @@ function Layout() {
 					</Navbar.Collapse>
 				</Navbar>
 				<Switch>
-					<Route path='/' exact component={Home} />
+					<Route path='/' exact component={Games} />
 					<Route path='/contact' component={Contact} />
 					<Route path='/game/:id' component={GameDetail} />
 					<Route path='/favorite' component={Favorite} />
