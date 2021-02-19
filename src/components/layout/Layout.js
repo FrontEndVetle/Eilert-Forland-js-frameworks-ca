@@ -7,7 +7,7 @@ import {
 	Route,
 	NavLink,
 } from 'react-router-dom';
-import Games from '../home/Games';
+import Games from '../games/Games';
 import Contact from '../contact/Contact';
 import GameDetail from '../games/gameDetail/GameDetail';
 import Favorite from '../favorite/Favorite';

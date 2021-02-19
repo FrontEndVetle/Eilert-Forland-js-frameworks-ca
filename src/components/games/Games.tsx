@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../layout/Heading';
-import GameList from '../games/GamesList';
+import GameList from './GamesList';
 import Carousel from 'react-bootstrap/Carousel';
 import { Container } from 'react-bootstrap';
 
