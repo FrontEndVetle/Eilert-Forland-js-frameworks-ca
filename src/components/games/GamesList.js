@@ -4,12 +4,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import GameItem from './GameItem';
 import Search from './Search';
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
 import Button from 'react-bootstrap/Button';
-import { GamesContext } from '../GamesContext';
+import { FaveContext, GamesContext } from '../GamesContext';
 
 function GameList() {
-	const [games] = useContext(GamesContext);
+	const [games, setGames] = useContext(GamesContext);
+	const [fave, setFave] = useContext(FaveContext);
+
 	const [filteredGames, setFilteredGames] = useState([]);
 
 	useEffect(() => {
@@ -30,24 +32,35 @@ function GameList() {
 		setFilteredGames(filteredArray);
 	};
 
-	const favoriteList = [];
-
 	//add game to favorite
 	const toggleFav = (game) => {
-		console.log(game);
+		console.log(fave);
+		const found = fave.some((el) => el.name === game.name);
 
-		favoriteList.push(game);
+		if (!found) {
+			game.class = 'card__icon--favorite';
+			setFave((prevFave) => [...prevFave, game]);
+			console.log(game);
+		}
 
-		//let savedFavorite = JSON.parse(localStorage.getItem(id));
-		localStorage.setItem('favoriteList', JSON.stringify(favoriteList));
+		if (found) {
+			const newArray = fave.filter((el) => el.name !== game.name);
+			{
+				game.class = 'card__icon';
+
+				setFave(newArray);
+			}
+		}
 	};
-	console.log(games);
 	return (
 		<>
 			<Search handleSearch={filterGames} />
 			<Row>
 				{filteredGames.map((game) => {
 					const { id, name, background_image, rating, released } = game;
+					if (game.class === undefined) {
+						game.class = 'card__icon';
+					}
 					return (
 						<Col sm={6} lg={3} key={id} className='d-flex '>
 							<GameItem
@@ -61,7 +74,7 @@ function GameList() {
 										className='card__btn'
 										variant='danger'
 										onClick={() => toggleFav(game)}>
-										<AiFillHeart className='card__icon' />
+										<AiFillHeart className={game.class} />
 									</Button>
 								}
 							/>

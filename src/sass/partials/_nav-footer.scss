@@ -3,9 +3,31 @@
     color: white;
     padding-top: 20px;
     text-align: center;
+    a {
+        color: $text-light;
+        margin: 10px;
+    }
+    li {
+        margin-bottom: 20px;
+    }
     &__c {
         background-color: black;
         padding: 20px;
+        color: $text-light;
+        a:hover {
+            color: $light;
+        }
+    }
+    &__hr {
+        background-color: $text-light;
+        width: 150px;
+    }
+}
+
+.navbar {
+    a {
+        font-family: $heading-stack;
+        font-size: 16px;
     }
 }
 

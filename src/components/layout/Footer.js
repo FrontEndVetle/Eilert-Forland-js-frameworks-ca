@@ -5,44 +5,43 @@ function Footer() {
 	return (
 		<Container fluid className=' p-0'>
 			<Row className='footer d-flex justify-content-around'>
-				<Col xs={12} md={4}>
-					<h5 className='title'>Footer Content</h5>
+				<Col xs={12} md={3}>
+					<h4 className='title'>SearchGames</h4>
+					<hr className='footer__hr' />
+
 					<p>
-						Here you can use rows and columns here to organize your footer
-						content.
+						Search games lets you search for your favorite games, check out
+						information about them and add them to your favorites list.
 					</p>
 				</Col>
 				<Col xs={12} md={3}>
 					<h5 className='title'>Links</h5>
+					<hr className='footer__hr' />
+
 					<ul>
 						<li className='list-unstyled'>
-							<a href='#!'>Link 1</a>
+							<a href='/'>Home</a>
 						</li>
 						<li className='list-unstyled'>
-							<a href='#!'>Link 2</a>
+							<a href='/contact'>Contact</a>
 						</li>
 						<li className='list-unstyled'>
-							<a href='#!'>Link 3</a>
-						</li>
-						<li className='list-unstyled'>
-							<a href='#!'>Link 4</a>
+							<a href='/favorite'>Favorite</a>
 						</li>
 					</ul>
 				</Col>
-				<Col xs={12} md={3}>
-					<h5 className='title'>Links</h5>
+				<Col xs={12} md={5}>
+					<h5 className='title'>Social media</h5>
+					<hr className='footer__hr' />
 					<ul>
 						<li className='list-unstyled'>
-							<a href='#!'>Link 1</a>
+							<a href='https://www.facebook.com/'>Facebook</a>
 						</li>
 						<li className='list-unstyled'>
-							<a href='#!'>Link 2</a>
+							<a href='https://www.instagram.com/'>Instagram</a>
 						</li>
 						<li className='list-unstyled'>
-							<a href='#!'>Link 3</a>
-						</li>
-						<li className='list-unstyled'>
-							<a href='#!'>Link 4</a>
+							<a href='https://twitter.com/'>Twitter</a>
 						</li>
 					</ul>
 				</Col>
@@ -52,7 +51,7 @@ function Footer() {
 					<Col className='text-center'>
 						<small>
 							&copy; {new Date().getFullYear()} Copyright:{' '}
-							<a href='https://github.com/FrontEndVetle'>
+							<a className='footer__c ' href='https://github.com/FrontEndVetle'>
 								Eilert Vetle Førland{' '}
 							</a>
 						</small>

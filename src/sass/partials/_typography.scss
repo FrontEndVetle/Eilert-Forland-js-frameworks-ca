@@ -3,6 +3,7 @@ h1 {
     text-align: center;
     margin-top: 30px;
     font-size: 20px;
+    color: $text-light;
 }
 
 h2,
@@ -10,16 +11,6 @@ h3 {
     font-family: $heading-stack;
     font-size: 18px;
     text-align: center;
-}
-
-* {
-    font-size: 14px;
-    color: $text-light;
-}
-
-a {
-    font-family: $heading-stack;
-    font-size: 16px;
 }
 
 @media only screen and (min-width: 600px) {
