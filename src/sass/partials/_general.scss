@@ -1,10 +1,12 @@
 .App {
     background-color: $bg-dark;
+    min-height: 100vh;
 }
 
 .spinner {
-    margin-top: 50%;
+    margin-top: 30%;
     margin-left: 50%;
+    padding: 40px;
 }
 
 .content {

@@ -11,7 +11,7 @@ function Games() {
 				<Carousel.Item interval={5000}>
 					<img
 						className='d-block w-100 carousel__img'
-						src='https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+						src='../images/gamer.jpg'
 						alt='First slide'
 					/>
 					<Carousel.Caption>
@@ -22,7 +22,7 @@ function Games() {
 				<Carousel.Item interval={5000}>
 					<img
 						className='d-block w-100  carousel__img'
-						src='https://images.unsplash.com/photo-1585079542156-2755d9c8a094?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80'
+						src='../images/keyboard.jpg'
 						alt='Second slide'
 					/>
 					<Carousel.Caption>
@@ -33,7 +33,7 @@ function Games() {
 				<Carousel.Item interval={5000}>
 					<img
 						className='d-block w-100  carousel__img'
-						src='https://images.unsplash.com/photo-1482855549413-2a6c9b1955a7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
+						src='../images/controller.jpg'
 						alt='Third slide'
 					/>
 					<Carousel.Caption>
