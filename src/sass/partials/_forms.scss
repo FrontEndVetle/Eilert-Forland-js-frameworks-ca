@@ -10,6 +10,10 @@ form p {
     color: $danger;
 }
 
+.form-label {
+    color: $text-light;
+}
+
 .validated {
     color: $success;
     font-size: 20px;
