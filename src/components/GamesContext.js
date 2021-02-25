@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { BASE_URL } from './constants/Api';
 import Spinner from 'react-bootstrap/Spinner';
+import Swal from 'sweetalert2';
 
 const GamesContext = createContext();
 const FaveContext = createContext();
@@ -18,7 +19,15 @@ const GamesProvider = (props) => {
 			.then((json) => {
 				setGames(json.results);
 			})
-			.catch((error) => console.log(error))
+			.catch((error) => {
+				console.log(error);
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Something went wrong!',
+					footer: 'Please try and reload the page',
+				});
+			})
 			.finally(() => setLoading(false));
 	}, []);
 
